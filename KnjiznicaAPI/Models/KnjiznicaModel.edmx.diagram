@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e51dc38b2d1a4f12ad9f14a3182882fe" Name="Diagram1">
+        <EntityTypeShape EntityType="DBKnjiznicaModel.ClanKnjiznice" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKnjiznicaModel.Knjiga" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKnjiznicaModel.Knjiznica" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKnjiznicaModel.Posudba" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKnjiznicaModel.Zaposlenik" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__ClanKnjiz__Knjiz__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Posudba__ClanID__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Knjiga__Knjiznic__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Posudba__KnjigaI__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Posudba__Knjizni__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Zaposleni__Knjiz__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKnjiznicaModel.FK__Posudba__Zaposle__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
