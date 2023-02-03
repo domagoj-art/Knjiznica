@@ -40,7 +40,7 @@
             this.Prijava.Location = new System.Drawing.Point(127, 73);
             this.Prijava.Name = "Prijava";
             this.Prijava.Size = new System.Drawing.Size(75, 23);
-            this.Prijava.TabIndex = 0;
+            this.Prijava.TabIndex = 3;
             this.Prijava.Text = "Prijava";
             this.Prijava.UseVisualStyleBackColor = true;
             this.Prijava.Click += new System.EventHandler(this.Prijava_Click);
@@ -68,7 +68,7 @@
             this.txtEmail.Location = new System.Drawing.Point(108, 21);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(140, 20);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 1;
             // 
             // txtSifra
             // 
@@ -76,7 +76,7 @@
             this.txtSifra.Mask = "9999999999";
             this.txtSifra.Name = "txtSifra";
             this.txtSifra.Size = new System.Drawing.Size(140, 20);
-            this.txtSifra.TabIndex = 5;
+            this.txtSifra.TabIndex = 2;
             // 
             // FormLogin
             // 
@@ -89,7 +89,7 @@
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Prijava);
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
+            this.Text = "Prijava";
             this.ResumeLayout(false);
             this.PerformLayout();
 

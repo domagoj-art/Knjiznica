@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBoxKnjiznicaID = new System.Windows.Forms.ComboBox();
-            this.comboBoxZaposlenikID = new System.Windows.Forms.ComboBox();
-            this.comboBoxClanID = new System.Windows.Forms.ComboBox();
-            this.comboBoxKnjigaID = new System.Windows.Forms.ComboBox();
+            this.cbKnjiznicaID = new System.Windows.Forms.ComboBox();
+            this.cbZaposlenikID = new System.Windows.Forms.ComboBox();
+            this.cbClanID = new System.Windows.Forms.ComboBox();
+            this.cbKnjigaID = new System.Windows.Forms.ComboBox();
             this.bsKnjige = new System.Windows.Forms.BindingSource(this.components);
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,13 +46,13 @@
             this.Add = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtPretrazivanje = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimeReturn = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeRent = new System.Windows.Forms.DateTimePicker();
+            this.datumVracanja = new System.Windows.Forms.DateTimePicker();
+            this.datumPreuzimanja = new System.Windows.Forms.DateTimePicker();
             this.Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsKnjige)).BeginInit();
@@ -71,39 +71,39 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // comboBoxKnjiznicaID
+            // cbKnjiznicaID
             // 
-            this.comboBoxKnjiznicaID.FormattingEnabled = true;
-            this.comboBoxKnjiznicaID.Location = new System.Drawing.Point(114, 54);
-            this.comboBoxKnjiznicaID.Name = "comboBoxKnjiznicaID";
-            this.comboBoxKnjiznicaID.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxKnjiznicaID.TabIndex = 1;
+            this.cbKnjiznicaID.FormattingEnabled = true;
+            this.cbKnjiznicaID.Location = new System.Drawing.Point(114, 54);
+            this.cbKnjiznicaID.Name = "cbKnjiznicaID";
+            this.cbKnjiznicaID.Size = new System.Drawing.Size(121, 21);
+            this.cbKnjiznicaID.TabIndex = 2;
             // 
-            // comboBoxZaposlenikID
+            // cbZaposlenikID
             // 
-            this.comboBoxZaposlenikID.FormattingEnabled = true;
-            this.comboBoxZaposlenikID.Location = new System.Drawing.Point(114, 166);
-            this.comboBoxZaposlenikID.Name = "comboBoxZaposlenikID";
-            this.comboBoxZaposlenikID.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxZaposlenikID.TabIndex = 5;
+            this.cbZaposlenikID.FormattingEnabled = true;
+            this.cbZaposlenikID.Location = new System.Drawing.Point(114, 166);
+            this.cbZaposlenikID.Name = "cbZaposlenikID";
+            this.cbZaposlenikID.Size = new System.Drawing.Size(121, 21);
+            this.cbZaposlenikID.TabIndex = 5;
             // 
-            // comboBoxClanID
+            // cbClanID
             // 
-            this.comboBoxClanID.FormattingEnabled = true;
-            this.comboBoxClanID.Location = new System.Drawing.Point(114, 128);
-            this.comboBoxClanID.Name = "comboBoxClanID";
-            this.comboBoxClanID.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxClanID.TabIndex = 6;
+            this.cbClanID.FormattingEnabled = true;
+            this.cbClanID.Location = new System.Drawing.Point(114, 128);
+            this.cbClanID.Name = "cbClanID";
+            this.cbClanID.Size = new System.Drawing.Size(121, 21);
+            this.cbClanID.TabIndex = 4;
             // 
-            // comboBoxKnjigaID
+            // cbKnjigaID
             // 
-            this.comboBoxKnjigaID.DataSource = this.bsKnjige;
-            this.comboBoxKnjigaID.DisplayMember = "ID";
-            this.comboBoxKnjigaID.FormattingEnabled = true;
-            this.comboBoxKnjigaID.Location = new System.Drawing.Point(114, 91);
-            this.comboBoxKnjigaID.Name = "comboBoxKnjigaID";
-            this.comboBoxKnjigaID.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxKnjigaID.TabIndex = 7;
+            this.cbKnjigaID.DataSource = this.bsKnjige;
+            this.cbKnjigaID.DisplayMember = "ID";
+            this.cbKnjigaID.FormattingEnabled = true;
+            this.cbKnjigaID.Location = new System.Drawing.Point(114, 91);
+            this.cbKnjigaID.Name = "cbKnjigaID";
+            this.cbKnjigaID.Size = new System.Drawing.Size(121, 21);
+            this.cbKnjigaID.TabIndex = 3;
             // 
             // bsKnjige
             // 
@@ -115,7 +115,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(121, 20);
-            this.txtID.TabIndex = 9;
+            this.txtID.TabIndex = 1;
             // 
             // label1
             // 
@@ -185,7 +185,7 @@
             this.Add.Location = new System.Drawing.Point(652, 78);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 18;
+            this.Add.TabIndex = 8;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -195,7 +195,7 @@
             this.Clear.Location = new System.Drawing.Point(652, 136);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 23);
-            this.Clear.TabIndex = 19;
+            this.Clear.TabIndex = 10;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
@@ -205,18 +205,18 @@
             this.Delete.Location = new System.Drawing.Point(652, 165);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 21;
+            this.Delete.TabIndex = 11;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // txtSearch
+            // txtPretrazivanje
             // 
-            this.txtSearch.Location = new System.Drawing.Point(426, 163);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(111, 20);
-            this.txtSearch.TabIndex = 22;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(426, 163);
+            this.txtPretrazivanje.Name = "txtPretrazivanje";
+            this.txtPretrazivanje.Size = new System.Drawing.Size(111, 20);
+            this.txtPretrazivanje.TabIndex = 12;
+            this.txtPretrazivanje.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label8
             // 
@@ -227,26 +227,26 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Search By Name";
             // 
-            // dateTimeReturn
+            // datumVracanja
             // 
-            this.dateTimeReturn.Location = new System.Drawing.Point(114, 242);
-            this.dateTimeReturn.Name = "dateTimeReturn";
-            this.dateTimeReturn.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeReturn.TabIndex = 25;
+            this.datumVracanja.Location = new System.Drawing.Point(114, 242);
+            this.datumVracanja.Name = "datumVracanja";
+            this.datumVracanja.Size = new System.Drawing.Size(200, 20);
+            this.datumVracanja.TabIndex = 7;
             // 
-            // dateTimeRent
+            // datumPreuzimanja
             // 
-            this.dateTimeRent.Location = new System.Drawing.Point(114, 201);
-            this.dateTimeRent.Name = "dateTimeRent";
-            this.dateTimeRent.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeRent.TabIndex = 26;
+            this.datumPreuzimanja.Location = new System.Drawing.Point(114, 201);
+            this.datumPreuzimanja.Name = "datumPreuzimanja";
+            this.datumPreuzimanja.Size = new System.Drawing.Size(200, 20);
+            this.datumPreuzimanja.TabIndex = 6;
             // 
             // Update
             // 
             this.Update.Location = new System.Drawing.Point(652, 107);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 27;
+            this.Update.TabIndex = 9;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
@@ -257,10 +257,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Update);
-            this.Controls.Add(this.dateTimeRent);
-            this.Controls.Add(this.dateTimeReturn);
+            this.Controls.Add(this.datumPreuzimanja);
+            this.Controls.Add(this.datumVracanja);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Add);
@@ -272,13 +272,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.comboBoxKnjigaID);
-            this.Controls.Add(this.comboBoxClanID);
-            this.Controls.Add(this.comboBoxZaposlenikID);
-            this.Controls.Add(this.comboBoxKnjiznicaID);
+            this.Controls.Add(this.cbKnjigaID);
+            this.Controls.Add(this.cbClanID);
+            this.Controls.Add(this.cbZaposlenikID);
+            this.Controls.Add(this.cbKnjiznicaID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormPosudbe";
-            this.Text = "FormPosudbe";
+            this.Text = "Posudba";
             this.Load += new System.EventHandler(this.FormPosudbe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsKnjige)).EndInit();
@@ -293,10 +293,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBoxKnjiznicaID;
-        private System.Windows.Forms.ComboBox comboBoxZaposlenikID;
-        private System.Windows.Forms.ComboBox comboBoxClanID;
-        private System.Windows.Forms.ComboBox comboBoxKnjigaID;
+        private System.Windows.Forms.ComboBox cbKnjiznicaID;
+        private System.Windows.Forms.ComboBox cbZaposlenikID;
+        private System.Windows.Forms.ComboBox cbClanID;
+        private System.Windows.Forms.ComboBox cbKnjigaID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -309,14 +309,14 @@
         private System.Windows.Forms.Button Clear;
         
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtPretrazivanje;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource bsKnjige;
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.BindingSource bindingSource3;
         private System.Windows.Forms.BindingSource bindingSource4;
-        private System.Windows.Forms.DateTimePicker dateTimeReturn;
-        private System.Windows.Forms.DateTimePicker dateTimeRent;
+        private System.Windows.Forms.DateTimePicker datumVracanja;
+        private System.Windows.Forms.DateTimePicker datumPreuzimanja;
         private System.Windows.Forms.Button Update;
     }
 }

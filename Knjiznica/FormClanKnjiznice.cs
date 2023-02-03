@@ -47,12 +47,12 @@ namespace Knjiznica
         {
             ClanKnjizniceViewModel noviClanKnjiznice = new ClanKnjizniceViewModel()
             {
-                KnjiznicaID = int.Parse(txtKnjiznicaID.Text.Trim()),
+                KnjiznicaID = Util.KnjiznicaID,
                 Ime = txtIme.Text.Trim(),
                 Prezime = txtPrezime.Text.Trim(),
                 Email = txtEmail.Text.Trim(),
                 KontaktBroj = txtKontaktBroj.Text.Trim(),
-                ClanarinaVrijediDo = dateTimePicker1.Value
+                ClanarinaVrijediDo = datumIstekaClanarine.Value
                 
             };
             var data = JsonConvert.SerializeObject(noviClanKnjiznice);
@@ -63,13 +63,13 @@ namespace Knjiznica
             ClanKnjizniceViewModel noviClanKnjiznice  = new ClanKnjizniceViewModel()
             {
 
-                KnjiznicaID = int.Parse(txtKnjiznicaID.Text.Trim()),
+                KnjiznicaID = Util.KnjiznicaID,
                 ID = int.Parse(txtID.Text.Trim()),
                 Ime = txtIme.Text.Trim(),
                 Prezime = txtPrezime.Text.Trim(),
                 Email = txtEmail.Text.Trim(),
                 KontaktBroj = txtKontaktBroj.Text.Trim(),
-                ClanarinaVrijediDo = dateTimePicker1.Value
+                ClanarinaVrijediDo = datumIstekaClanarine.Value
 
 
             };
@@ -84,29 +84,57 @@ namespace Knjiznica
             txtPrezime.Text = "";
             txtEmail.Text = "";
             txtKontaktBroj.Text = "";
-            dateTimePicker1.Value = DateTime.Today;
+            datumIstekaClanarine.Value = DateTime.Today;
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
-            AddData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                if (CheckFields() == true)
+                {
+                    AddData();
+                    ClearTextData();
+                    GetAll();
+                }
+                
+            }
+            catch (Exception)
+            {
+
+            }
+          
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtID.Text.Trim());
-            Util.Delete(urlClass, id);
-            ClearTextData();
-            GetAll();
+            try
+            {
+                int id = int.Parse(txtID.Text.Trim());
+                Util.Delete(urlClass, id);
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                UpdateData();
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -118,7 +146,26 @@ namespace Knjiznica
             txtPrezime.Text = Convert.ToString(dataGridView1[3, row].Value);
             txtEmail.Text = Convert.ToString(dataGridView1[4, row].Value);
             txtKontaktBroj.Text = Convert.ToString(dataGridView1[5, row].Value);
-            dateTimePicker1.Text = Convert.ToString(dataGridView1[6, row].Value);
+            datumIstekaClanarine.Text = Convert.ToString(dataGridView1[6, row].Value);
+        }
+        private bool CheckFields()
+        {
+            if(txtIme.Text == "" || txtPrezime.Text == "" || txtEmail.Text == "" || txtKontaktBroj.Text == "")
+            {
+                MessageBox.Show("Popunite sva polja", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (datumIstekaClanarine.Value.Date != DateTime.Today.AddYears(1))
+            {
+                MessageBox.Show("Članarina mora vrijediti godinu dana od danas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else
+            {
+
+                return true;
+            }
+            
         }
 
     }

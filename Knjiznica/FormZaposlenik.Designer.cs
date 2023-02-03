@@ -47,7 +47,7 @@
             this.Delete = new System.Windows.Forms.Button();
             this.txtSifra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pocetakRada = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,28 +74,28 @@
             this.txtKontaktBroj.Location = new System.Drawing.Point(100, 229);
             this.txtKontaktBroj.Name = "txtKontaktBroj";
             this.txtKontaktBroj.Size = new System.Drawing.Size(183, 20);
-            this.txtKontaktBroj.TabIndex = 3;
+            this.txtKontaktBroj.TabIndex = 7;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(100, 157);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(183, 20);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtPrezime
             // 
             this.txtPrezime.Location = new System.Drawing.Point(100, 119);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(183, 20);
-            this.txtPrezime.TabIndex = 5;
+            this.txtPrezime.TabIndex = 4;
             // 
             // txtIme
             // 
             this.txtIme.Location = new System.Drawing.Point(100, 80);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(183, 20);
-            this.txtIme.TabIndex = 6;
+            this.txtIme.TabIndex = 3;
             // 
             // txtID
             // 
@@ -103,7 +103,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(183, 20);
-            this.txtID.TabIndex = 7;
+            this.txtID.TabIndex = 2;
             // 
             // label1
             // 
@@ -173,7 +173,7 @@
             this.Add.Location = new System.Drawing.Point(312, 118);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 15;
+            this.Add.TabIndex = 9;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -183,7 +183,7 @@
             this.Update.Location = new System.Drawing.Point(550, 118);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 16;
+            this.Update.TabIndex = 11;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
@@ -193,7 +193,7 @@
             this.Delete.Location = new System.Drawing.Point(430, 118);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 17;
+            this.Delete.TabIndex = 10;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -203,7 +203,7 @@
             this.txtSifra.Location = new System.Drawing.Point(100, 194);
             this.txtSifra.Name = "txtSifra";
             this.txtSifra.Size = new System.Drawing.Size(183, 20);
-            this.txtSifra.TabIndex = 18;
+            this.txtSifra.TabIndex = 6;
             // 
             // label8
             // 
@@ -214,19 +214,19 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Šifra";
             // 
-            // dateTimePicker1
+            // pocetakRada
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(100, 264);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.pocetakRada.Location = new System.Drawing.Point(100, 264);
+            this.pocetakRada.Name = "pocetakRada";
+            this.pocetakRada.Size = new System.Drawing.Size(183, 20);
+            this.pocetakRada.TabIndex = 8;
             // 
             // FormZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.pocetakRada);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSifra);
             this.Controls.Add(this.Delete);
@@ -247,7 +247,7 @@
             this.Controls.Add(this.txtKnjiznicaID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormZaposlenik";
-            this.Text = "FormZaposlenik";
+            this.Text = "Zaposlenik";
             this.Load += new System.EventHandler(this.FormZaposlenik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -276,6 +276,6 @@
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.TextBox txtSifra;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker pocetakRada;
     }
 }

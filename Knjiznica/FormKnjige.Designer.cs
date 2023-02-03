@@ -59,21 +59,21 @@
             this.txtNazivKnjige.Location = new System.Drawing.Point(89, 120);
             this.txtNazivKnjige.Name = "txtNazivKnjige";
             this.txtNazivKnjige.Size = new System.Drawing.Size(164, 20);
-            this.txtNazivKnjige.TabIndex = 2;
+            this.txtNazivKnjige.TabIndex = 3;
             // 
             // txtPisac
             // 
             this.txtPisac.Location = new System.Drawing.Point(89, 94);
             this.txtPisac.Name = "txtPisac";
             this.txtPisac.Size = new System.Drawing.Size(164, 20);
-            this.txtPisac.TabIndex = 3;
+            this.txtPisac.TabIndex = 2;
             // 
             // Add
             // 
             this.Add.Location = new System.Drawing.Point(464, 42);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 5;
+            this.Add.TabIndex = 4;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -84,7 +84,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(164, 20);
-            this.txtID.TabIndex = 7;
+            this.txtID.TabIndex = 1;
             // 
             // label2
             // 
@@ -118,7 +118,7 @@
             this.Delete.Location = new System.Drawing.Point(585, 42);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 12;
+            this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -128,7 +128,7 @@
             this.Update.Location = new System.Drawing.Point(702, 42);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 13;
+            this.Update.TabIndex = 6;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);

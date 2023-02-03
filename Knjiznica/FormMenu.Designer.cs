@@ -93,7 +93,7 @@
             this.ClientSize = new System.Drawing.Size(837, 449);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormMenu";
-            this.Text = "Knjižnica";
+            this.Text = "Izbornik";
             this.Shown += new System.EventHandler(this.FormMenu_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

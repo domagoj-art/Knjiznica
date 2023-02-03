@@ -51,9 +51,24 @@ namespace Knjiznica
 
         private void Add_Click(object sender, EventArgs e)
         {
-            AddData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                if (txtNazivKnjige.Text == "" || txtPisac.Text == "")
+                {
+                    MessageBox.Show("Popunite sva polja", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    AddData();
+                    ClearTextData();
+                    GetAll();
+                }
+            }
+            catch (Exception)
+            {
+
+                
+            }
 
         }
 
@@ -98,17 +113,36 @@ namespace Knjiznica
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtID.Text);
-            Util.Delete(urlClass, id);
-            ClearTextData();
-            GetAll();
+            
+            try
+            {
+                int id = int.Parse(txtID.Text);
+                Util.Delete(urlClass, id);
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                UpdateData();
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+
+           
         }
         public void ClearTextData()
         {

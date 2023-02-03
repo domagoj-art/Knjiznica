@@ -51,7 +51,7 @@ namespace Knjiznica
                 Email = txtEmail.Text.Trim(),
                 Sifra = int.Parse(txtSifra.Text.Trim()),
                 KontaktBroj = txtKontaktBroj.Text.Trim(),
-                PocetakRada = dateTimePicker1.Value
+                PocetakRada = pocetakRada.Value
 
             };
             var data = JsonConvert.SerializeObject(noviZaposlenik);
@@ -70,7 +70,7 @@ namespace Knjiznica
                 Email = txtEmail.Text.Trim(),
                 Sifra = int.Parse(txtSifra.Text.Trim()),
                 KontaktBroj = txtKontaktBroj.Text.Trim(),
-                PocetakRada = dateTimePicker1.Value
+                PocetakRada = pocetakRada.Value
 
 
             };
@@ -85,25 +85,57 @@ namespace Knjiznica
 
         private void Add_Click(object sender, EventArgs e)
         {
-            AddData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                if (txtIme.Text == "" || txtPrezime.Text == "" || txtSifra.Text == "" || txtKontaktBroj.Text == "" || txtEmail.Text == "")
+                {
+                    MessageBox.Show("popunite sva polja", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    AddData();
+                    ClearTextData();
+                    GetAll();
+                }
+            }
+            catch (Exception)
+            {
+
+      
+            }
+            
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtID.Text);
-            Util.Delete(urlClass, id);
-            ClearTextData();
-            GetAll();
+            try
+            {
+                int id = int.Parse(txtID.Text);
+                Util.Delete(urlClass, id);
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+            }
+            
             
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            ClearTextData();
-            GetAll();
+            try
+            {
+                UpdateData();
+                ClearTextData();
+                GetAll();
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -116,7 +148,7 @@ namespace Knjiznica
             txtEmail.Text = Convert.ToString(dataGridView1[4, row].Value);
             txtSifra.Text = Convert.ToString(dataGridView1[5, row].Value);
             txtKontaktBroj.Text = Convert.ToString(dataGridView1[6, row].Value);
-            dateTimePicker1.Text = Convert.ToString(dataGridView1[7, row].Value);
+            pocetakRada.Text = Convert.ToString(dataGridView1[7, row].Value);
         }
         public void ClearTextData()
         {
@@ -125,7 +157,7 @@ namespace Knjiznica
             txtIme.Text = "";
             txtKnjiznicaID.Text = "";
             txtKontaktBroj.Text = "";
-            dateTimePicker1.Text = "";
+            pocetakRada.Text = "";
             txtPrezime.Text = "";
             txtSifra.Text = "";
         }

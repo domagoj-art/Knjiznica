@@ -64,14 +64,14 @@
             this.txtAdresaKnjiznice.Location = new System.Drawing.Point(112, 151);
             this.txtAdresaKnjiznice.Name = "txtAdresaKnjiznice";
             this.txtAdresaKnjiznice.Size = new System.Drawing.Size(118, 20);
-            this.txtAdresaKnjiznice.TabIndex = 2;
+            this.txtAdresaKnjiznice.TabIndex = 3;
             // 
             // txtNazivKnjiznice
             // 
             this.txtNazivKnjiznice.Location = new System.Drawing.Point(112, 94);
             this.txtNazivKnjiznice.Name = "txtNazivKnjiznice";
             this.txtNazivKnjiznice.Size = new System.Drawing.Size(118, 20);
-            this.txtNazivKnjiznice.TabIndex = 3;
+            this.txtNazivKnjiznice.TabIndex = 2;
             // 
             // Add
             // 
@@ -88,7 +88,7 @@
             this.Update.Location = new System.Drawing.Point(635, 92);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 5;
+            this.Update.TabIndex = 6;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
@@ -98,7 +98,7 @@
             this.Delete.Location = new System.Drawing.Point(493, 92);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 6;
+            this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -146,7 +146,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormKnjiznica";
-            this.Text = "FormKnjiznica";
+            this.Text = "Knjižnica";
             this.Load += new System.EventHandler(this.FormKnjiznica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

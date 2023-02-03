@@ -44,7 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datumIstekaClanarine = new System.Windows.Forms.DateTimePicker();
             this.Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,28 +72,28 @@
             this.txtKontaktBroj.Location = new System.Drawing.Point(129, 191);
             this.txtKontaktBroj.Name = "txtKontaktBroj";
             this.txtKontaktBroj.Size = new System.Drawing.Size(100, 20);
-            this.txtKontaktBroj.TabIndex = 3;
+            this.txtKontaktBroj.TabIndex = 6;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(129, 153);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtPrezime
             // 
             this.txtPrezime.Location = new System.Drawing.Point(129, 118);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(100, 20);
-            this.txtPrezime.TabIndex = 5;
+            this.txtPrezime.TabIndex = 4;
             // 
             // txtIme
             // 
             this.txtIme.Location = new System.Drawing.Point(129, 81);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(100, 20);
-            this.txtIme.TabIndex = 6;
+            this.txtIme.TabIndex = 3;
             // 
             // txtID
             // 
@@ -101,7 +101,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 7;
+            this.txtID.TabIndex = 2;
             // 
             // Add
             // 
@@ -118,7 +118,7 @@
             this.Delete.Location = new System.Drawing.Point(434, 45);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 10;
+            this.Delete.TabIndex = 9;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -186,19 +186,19 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Clanarina Vrijedi Do";
             // 
-            // dateTimePicker1
+            // datumIstekaClanarine
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 221);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.datumIstekaClanarine.Location = new System.Drawing.Point(129, 221);
+            this.datumIstekaClanarine.Name = "datumIstekaClanarine";
+            this.datumIstekaClanarine.Size = new System.Drawing.Size(200, 20);
+            this.datumIstekaClanarine.TabIndex = 7;
             // 
             // Update
             // 
             this.Update.Location = new System.Drawing.Point(555, 45);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 19;
+            this.Update.TabIndex = 10;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
@@ -209,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Update);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datumIstekaClanarine);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -227,7 +227,7 @@
             this.Controls.Add(this.txtKnjiznicaID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormClanKnjiznice";
-            this.Text = "FormClanKnjiznice";
+            this.Text = "Član Knjižnice";
             this.Load += new System.EventHandler(this.FormClanKnjiznice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -253,7 +253,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datumIstekaClanarine;
         private System.Windows.Forms.Button Update;
     }
 }
