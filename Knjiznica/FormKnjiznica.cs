@@ -132,5 +132,10 @@ namespace Knjiznica
             txtID.Text = "";
             txtNazivKnjiznice.Text = "";
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            ClearTextData();
+        }
     }
 }

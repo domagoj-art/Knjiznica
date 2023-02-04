@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Knjiznica.ViewModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace Knjiznica
             {
                 WebClient client = new WebClient();
                 String json = client.DownloadString("http://localhost:5604/api/Zaposlenik/?email=" + email + "&sifra=" + sifra + "");
-                Zaposlenik zaposleniks = JsonConvert.DeserializeObject<Zaposlenik>(json);
+                ZaposlenikViewModel zaposleniks = JsonConvert.DeserializeObject<ZaposlenikViewModel>(json);
                 var va = zaposleniks.KnjiznicaID;
                
                 if(zaposleniks == null)

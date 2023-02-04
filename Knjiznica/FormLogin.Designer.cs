@@ -37,6 +37,7 @@
             // 
             // Prijava
             // 
+            this.Prijava.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Prijava.Location = new System.Drawing.Point(127, 73);
             this.Prijava.Name = "Prijava";
             this.Prijava.Size = new System.Drawing.Size(75, 23);

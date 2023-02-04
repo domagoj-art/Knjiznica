@@ -48,6 +48,7 @@
             this.txtSifra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pocetakRada = new System.Windows.Forms.DateTimePicker();
+            this.Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@
             // 
             // txtKnjiznicaID
             // 
+            this.txtKnjiznicaID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtKnjiznicaID.Location = new System.Drawing.Point(100, 6);
             this.txtKnjiznicaID.Name = "txtKnjiznicaID";
             this.txtKnjiznicaID.ReadOnly = true;
@@ -99,6 +101,7 @@
             // 
             // txtID
             // 
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtID.Location = new System.Drawing.Point(100, 41);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -170,31 +173,34 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(312, 118);
+            this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Add.Location = new System.Drawing.Point(430, 87);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 9;
-            this.Add.Text = "Add";
+            this.Add.Text = "Dodaj";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(550, 118);
+            this.Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Update.Location = new System.Drawing.Point(430, 116);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 11;
-            this.Update.Text = "Update";
+            this.Update.TabIndex = 10;
+            this.Update.Text = "Ažuriraj";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(430, 118);
+            this.Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete.Location = new System.Drawing.Point(430, 174);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 10;
-            this.Delete.Text = "Delete";
+            this.Delete.TabIndex = 12;
+            this.Delete.Text = "Obriši";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
@@ -221,11 +227,23 @@
             this.pocetakRada.Size = new System.Drawing.Size(183, 20);
             this.pocetakRada.TabIndex = 8;
             // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.Location = new System.Drawing.Point(430, 145);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(75, 23);
+            this.Clear.TabIndex = 11;
+            this.Clear.Text = "Očisti";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
             // FormZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.pocetakRada);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSifra);
@@ -277,5 +295,6 @@
         private System.Windows.Forms.TextBox txtSifra;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker pocetakRada;
+        private System.Windows.Forms.Button Clear;
     }
 }

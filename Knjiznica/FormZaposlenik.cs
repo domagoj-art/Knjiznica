@@ -161,5 +161,10 @@ namespace Knjiznica
             txtPrezime.Text = "";
             txtSifra.Text = "";
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            ClearTextData();
+        }
     }
 }

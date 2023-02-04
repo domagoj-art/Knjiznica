@@ -38,6 +38,7 @@
             this.ID = new System.Windows.Forms.Label();
             this.Naziv = new System.Windows.Forms.Label();
             this.Adresa = new System.Windows.Forms.Label();
+            this.Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(112, 35);
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtID.Location = new System.Drawing.Point(112, 68);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(118, 20);
@@ -61,7 +63,7 @@
             // 
             // txtAdresaKnjiznice
             // 
-            this.txtAdresaKnjiznice.Location = new System.Drawing.Point(112, 151);
+            this.txtAdresaKnjiznice.Location = new System.Drawing.Point(112, 120);
             this.txtAdresaKnjiznice.Name = "txtAdresaKnjiznice";
             this.txtAdresaKnjiznice.Size = new System.Drawing.Size(118, 20);
             this.txtAdresaKnjiznice.TabIndex = 3;
@@ -75,38 +77,41 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(354, 92);
+            this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Add.Location = new System.Drawing.Point(388, 66);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 4;
-            this.Add.Text = "Add";
+            this.Add.Text = "Dodaj";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(635, 92);
+            this.Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Update.Location = new System.Drawing.Point(388, 95);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 6;
-            this.Update.Text = "Update";
+            this.Update.TabIndex = 5;
+            this.Update.Text = "Ažuriraj";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(493, 92);
+            this.Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete.Location = new System.Drawing.Point(388, 153);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 5;
-            this.Delete.Text = "Delete";
+            this.Delete.TabIndex = 7;
+            this.Delete.Text = "Obriši";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(12, 38);
+            this.ID.Location = new System.Drawing.Point(12, 71);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(18, 13);
             this.ID.TabIndex = 7;
@@ -124,17 +129,29 @@
             // Adresa
             // 
             this.Adresa.AutoSize = true;
-            this.Adresa.Location = new System.Drawing.Point(12, 154);
+            this.Adresa.Location = new System.Drawing.Point(12, 123);
             this.Adresa.Name = "Adresa";
             this.Adresa.Size = new System.Drawing.Size(40, 13);
             this.Adresa.TabIndex = 9;
             this.Adresa.Text = "Adresa";
+            // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.Location = new System.Drawing.Point(388, 124);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(75, 23);
+            this.Clear.TabIndex = 6;
+            this.Clear.Text = "Očisti";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // FormKnjiznica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.Adresa);
             this.Controls.Add(this.Naziv);
             this.Controls.Add(this.ID);
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label Naziv;
         private System.Windows.Forms.Label Adresa;
+        private System.Windows.Forms.Button Clear;
     }
 }

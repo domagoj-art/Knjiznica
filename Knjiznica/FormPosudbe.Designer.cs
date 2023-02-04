@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbKnjiznicaID = new System.Windows.Forms.ComboBox();
             this.cbZaposlenikID = new System.Windows.Forms.ComboBox();
             this.cbClanID = new System.Windows.Forms.ComboBox();
             this.cbKnjigaID = new System.Windows.Forms.ComboBox();
@@ -42,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.Add = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
@@ -71,39 +69,31 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // cbKnjiznicaID
-            // 
-            this.cbKnjiznicaID.FormattingEnabled = true;
-            this.cbKnjiznicaID.Location = new System.Drawing.Point(114, 54);
-            this.cbKnjiznicaID.Name = "cbKnjiznicaID";
-            this.cbKnjiznicaID.Size = new System.Drawing.Size(121, 21);
-            this.cbKnjiznicaID.TabIndex = 2;
-            // 
             // cbZaposlenikID
             // 
             this.cbZaposlenikID.FormattingEnabled = true;
-            this.cbZaposlenikID.Location = new System.Drawing.Point(114, 166);
+            this.cbZaposlenikID.Location = new System.Drawing.Point(114, 138);
             this.cbZaposlenikID.Name = "cbZaposlenikID";
             this.cbZaposlenikID.Size = new System.Drawing.Size(121, 21);
-            this.cbZaposlenikID.TabIndex = 5;
+            this.cbZaposlenikID.TabIndex = 4;
             // 
             // cbClanID
             // 
             this.cbClanID.FormattingEnabled = true;
-            this.cbClanID.Location = new System.Drawing.Point(114, 128);
+            this.cbClanID.Location = new System.Drawing.Point(114, 98);
             this.cbClanID.Name = "cbClanID";
             this.cbClanID.Size = new System.Drawing.Size(121, 21);
-            this.cbClanID.TabIndex = 4;
+            this.cbClanID.TabIndex = 3;
             // 
             // cbKnjigaID
             // 
             this.cbKnjigaID.DataSource = this.bsKnjige;
             this.cbKnjigaID.DisplayMember = "ID";
             this.cbKnjigaID.FormattingEnabled = true;
-            this.cbKnjigaID.Location = new System.Drawing.Point(114, 91);
+            this.cbKnjigaID.Location = new System.Drawing.Point(114, 57);
             this.cbKnjigaID.Name = "cbKnjigaID";
             this.cbKnjigaID.Size = new System.Drawing.Size(121, 21);
-            this.cbKnjigaID.TabIndex = 3;
+            this.cbKnjigaID.TabIndex = 2;
             // 
             // bsKnjige
             // 
@@ -111,6 +101,7 @@
             // 
             // txtID
             // 
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtID.Location = new System.Drawing.Point(114, 16);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -129,7 +120,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 248);
+            this.label2.Location = new System.Drawing.Point(12, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 12;
@@ -138,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 208);
+            this.label3.Location = new System.Drawing.Point(12, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 13;
@@ -147,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 169);
+            this.label4.Location = new System.Drawing.Point(12, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 14;
@@ -156,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 131);
+            this.label5.Location = new System.Drawing.Point(12, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 15;
@@ -165,89 +156,84 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 94);
+            this.label6.Location = new System.Drawing.Point(12, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Knjiga ID";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Knjižnica ID";
-            // 
             // Add
             // 
+            this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add.Location = new System.Drawing.Point(652, 78);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 8;
-            this.Add.Text = "Add";
+            this.Add.TabIndex = 7;
+            this.Add.Text = "Dodaj";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Clear
             // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Clear.Location = new System.Drawing.Point(652, 136);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 23);
-            this.Clear.TabIndex = 10;
-            this.Clear.Text = "Clear";
+            this.Clear.TabIndex = 9;
+            this.Clear.Text = "Očisti";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Delete
             // 
+            this.Delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Delete.Location = new System.Drawing.Point(652, 165);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 11;
-            this.Delete.Text = "Delete";
+            this.Delete.TabIndex = 10;
+            this.Delete.Text = "Obriši";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // txtPretrazivanje
             // 
-            this.txtPretrazivanje.Location = new System.Drawing.Point(426, 163);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(616, 16);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(111, 20);
-            this.txtPretrazivanje.TabIndex = 12;
+            this.txtPretrazivanje.TabIndex = 11;
             this.txtPretrazivanje.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(316, 166);
+            this.label8.Location = new System.Drawing.Point(330, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.Size = new System.Drawing.Size(280, 13);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Search By Name";
+            this.label8.Text = "Traži po nazivu knjige, imenu ili prezimenu člana knjižnice ";
             // 
             // datumVracanja
             // 
-            this.datumVracanja.Location = new System.Drawing.Point(114, 242);
+            this.datumVracanja.Location = new System.Drawing.Point(114, 228);
             this.datumVracanja.Name = "datumVracanja";
             this.datumVracanja.Size = new System.Drawing.Size(200, 20);
-            this.datumVracanja.TabIndex = 7;
+            this.datumVracanja.TabIndex = 6;
             // 
             // datumPreuzimanja
             // 
-            this.datumPreuzimanja.Location = new System.Drawing.Point(114, 201);
+            this.datumPreuzimanja.Location = new System.Drawing.Point(114, 185);
             this.datumPreuzimanja.Name = "datumPreuzimanja";
             this.datumPreuzimanja.Size = new System.Drawing.Size(200, 20);
-            this.datumPreuzimanja.TabIndex = 6;
+            this.datumPreuzimanja.TabIndex = 5;
             // 
             // Update
             // 
+            this.Update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Update.Location = new System.Drawing.Point(652, 107);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 9;
-            this.Update.Text = "Update";
+            this.Update.TabIndex = 8;
+            this.Update.Text = "Ažuriraj";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
@@ -264,7 +250,6 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -275,7 +260,6 @@
             this.Controls.Add(this.cbKnjigaID);
             this.Controls.Add(this.cbClanID);
             this.Controls.Add(this.cbZaposlenikID);
-            this.Controls.Add(this.cbKnjiznicaID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormPosudbe";
             this.Text = "Posudba";
@@ -293,7 +277,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cbKnjiznicaID;
         private System.Windows.Forms.ComboBox cbZaposlenikID;
         private System.Windows.Forms.ComboBox cbClanID;
         private System.Windows.Forms.ComboBox cbKnjigaID;
@@ -304,7 +287,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Clear;
         

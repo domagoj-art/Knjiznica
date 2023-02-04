@@ -46,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.datumIstekaClanarine = new System.Windows.Forms.DateTimePicker();
             this.Update = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             // 
             // txtKnjiznicaID
             // 
+            this.txtKnjiznicaID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtKnjiznicaID.Location = new System.Drawing.Point(129, 6);
             this.txtKnjiznicaID.Name = "txtKnjiznicaID";
             this.txtKnjiznicaID.ReadOnly = true;
@@ -97,6 +99,7 @@
             // 
             // txtID
             // 
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtID.Location = new System.Drawing.Point(129, 41);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -105,21 +108,23 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(317, 45);
+            this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Add.Location = new System.Drawing.Point(409, 79);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 8;
-            this.Add.Text = "Add";
+            this.Add.Text = "Dodaj";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(434, 45);
+            this.Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete.Location = new System.Drawing.Point(409, 189);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 9;
-            this.Delete.Text = "Delete";
+            this.Delete.TabIndex = 11;
+            this.Delete.Text = "Obriši";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
@@ -195,19 +200,32 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(555, 45);
+            this.Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Update.Location = new System.Drawing.Point(409, 116);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 10;
-            this.Update.Text = "Update";
+            this.Update.TabIndex = 9;
+            this.Update.Text = "Ažuriraj";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.Location = new System.Drawing.Point(409, 151);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(75, 23);
+            this.Clear.TabIndex = 10;
+            this.Clear.Text = "Očisti";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormClanKnjiznice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.datumIstekaClanarine);
             this.Controls.Add(this.label7);
@@ -255,5 +273,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker datumIstekaClanarine;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Clear;
     }
 }

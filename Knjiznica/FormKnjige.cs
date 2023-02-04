@@ -150,6 +150,11 @@ namespace Knjiznica
             txtNazivKnjige.Text = "";
             txtPisac.Text = "";
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            ClearTextData();
+        }
     }
 
        
