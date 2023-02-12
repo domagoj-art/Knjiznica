@@ -24,22 +24,6 @@ namespace Knjiznica
         {
             InitializeComponent();
         }
-
-        /*public void GetAllKnjiznicas() { 
-        WebClient client = new WebClient();
-        String json = client.DownloadString("http://localhost:5604/api/Knjiznica");
-        List<KnjiznicaViewModel> knjiznicas = JsonConvert.DeserializeObject<List<KnjiznicaViewModel>>(json);
-           
-            var bindingSource1 = new BindingSource();
-            bindingSource1.DataSource = knjiznicas;
-            cbKnjiznicaID.DataSource = bindingSource1.DataSource;
-            cbKnjiznicaID.DisplayMember = "NazivKnjiznice";
-            cbKnjiznicaID.ValueMember = "ID";
-            cbKnjiznicaID.SelectedIndex = -1;
-            cbKnjiznicaID.SelectedText = "--Select--";
-            cbKnjiznicaID.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cbKnjiznicaID.AutoCompleteSource = AutoCompleteSource.ListItems;
-        }*/
         public void GetAllKnjigas()
         {
             WebClient client = new WebClient();
@@ -77,7 +61,6 @@ namespace Knjiznica
 
             WebClient client = new WebClient();
             String json = client.DownloadString("http://localhost:5604/api/Zaposlenik/?knjiznicaID=" + knjiznicaId + "");
-            //String json = client.DownloadString("http://localhost:5604/api/Zaposlenik");
             List<ZaposlenikViewModel> zaposleniks = JsonConvert.DeserializeObject<List<ZaposlenikViewModel>>(json);
 
             var bindingSource1 = new BindingSource();
@@ -118,11 +101,6 @@ namespace Knjiznica
                 KnjiznicaID = knjiznicaId,
                 ZaposlenikID = int.Parse(cbZaposlenikID.SelectedValue.ToString()),
                 DatumPreuzimanja = datumPreuzimanja.Value,
-                DatumVracanja = datumVracanja.Value
-
-
-
-
             };
             var data = JsonConvert.SerializeObject(novaPosudba);
             Util.POST(urlClass, data);
@@ -148,8 +126,6 @@ namespace Knjiznica
         public void ClearTextData()
         {
             txtID.Text = "";
-            //cbKnjiznicaID.SelectedIndex = -1;
-            //cbKnjiznicaID.Text = "--Select--";
             cbKnjigaID.SelectedIndex = -1;
             cbKnjigaID.Text = "--Select--";
             cbClanID.SelectedIndex = -1;
@@ -165,7 +141,7 @@ namespace Knjiznica
         {
 
             GetAll();
-            //GetAllKnjiznicas();
+            
             GetAllKnjigas();
             GetAllClans();
             GetAllZaposleniks();
@@ -176,7 +152,7 @@ namespace Knjiznica
         {
             int row = e.RowIndex;
             txtID.Text = Convert.ToString(dataGridView1[0, row].Value);
-            //cbKnjiznicaID.SelectedValue = dataGridView1[1, row].Value;
+            
             cbKnjigaID.SelectedValue = dataGridView1[2, row].Value;
             cbClanID.SelectedValue = dataGridView1[3, row].Value;
             cbZaposlenikID.SelectedValue = dataGridView1[4, row].Value;
@@ -259,11 +235,7 @@ namespace Knjiznica
                 MessageBox.Show("Datum preuzimanja mora biti postavljen na današnji datum", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            if(datumVracanja.Value.Date != DateTime.Today.AddDays(-1))
-            {
-                MessageBox.Show("Postavite datum vraćanja na jučerašnji datum", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
+            
             else
             {
                 return true;
